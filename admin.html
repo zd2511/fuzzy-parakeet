@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#07110e">
+  <title>VTS Admin | Product Catalog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body class="admin-page">
+  <header class="admin-header">
+    <div class="admin-header-inner">
+      <a href="index.html" class="admin-brand">
+        <img src="logo.png" alt="VTS Logo">
+        <span>PRODUCT ADMIN</span>
+      </a>
+      <div class="admin-header-actions">
+        <span class="storage-status">● Local Storage</span>
+        <button class="logout-button" id="logoutBtn">Log Out</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="admin-main">
+    <div class="admin-container">
+      <div class="admin-title-row">
+        <div>
+          <p class="admin-kicker">Product Management</p>
+          <h1>Product Catalog</h1>
+          <p class="admin-subtitle">Add, edit and remove products shown on the public VTS website.</p>
+        </div>
+        <button class="admin-primary" id="addProductBtn">＋ Add Product</button>
+      </div>
+
+      <section class="stats-grid">
+        <div class="stat-card"><span>Total Products</span><strong id="totalProducts">0</strong></div>
+        <div class="stat-card"><span>Fully Installed</span><strong id="installedProducts">0</strong></div>
+        <div class="stat-card"><span>Categories</span><strong id="categoryCount">0</strong></div>
+      </section>
+
+      <section class="admin-panel">
+        <div class="panel-heading">
+          <div><h2>Products</h2><p>Changes are saved directly in this browser.</p></div>
+        </div>
+        <div class="table-scroll">
+          <table class="products-table">
+            <thead>
+              <tr>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Features</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="productTable"></tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div class="admin-modal hidden" id="productModal" role="dialog" aria-modal="true">
+    <div class="product-form-card">
+      <div class="form-heading">
+        <div>
+          <p class="admin-kicker">Product</p>
+          <h2 id="formTitle">Add Product</h2>
+        </div>
+        <button class="form-close" id="closeProductModal" aria-label="Close">×</button>
+      </div>
+
+      <form id="productForm">
+        <input type="hidden" id="productId">
+
+        <div class="form-group">
+          <label for="productName">Product Name</label>
+          <input id="productName" required maxlength="120" placeholder="Hikvision 8-Channel CCTV Package">
+        </div>
+
+        <div class="form-two">
+          <div class="form-group">
+            <label for="productCategory">Category</label>
+            <select id="productCategory">
+              <option>CCTV</option>
+              <option>Access Control</option>
+              <option>Alarms</option>
+              <option>Solar</option>
+              <option>Batteries</option>
+              <option>Inverters</option>
+              <option>UPS</option>
+              <option>Security</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="productPrice">Price (R)</label>
+            <input id="productPrice" type="number" min="0" step="1" required placeholder="7800">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Product Photo</label>
+          <input class="visually-hidden" id="productImage" type="file" accept="image/*">
+          <div class="upload-row">
+            <button type="button" class="upload-button" id="uploadPhotoBtn">📷 Upload Photo</button>
+            <span id="fileName" class="file-name">No photo selected</span>
+          </div>
+          <div class="image-preview" id="imagePreview">
+            <img id="previewImage" alt="Uploaded product preview">
+            <span id="previewPlaceholder">Your uploaded photo preview will appear here</span>
+          </div>
+          <p class="field-help">Choose a JPG, PNG, WEBP or other browser-supported image. The image is converted to a local data URL and saved in localStorage with the product.</p>
+        </div>
+
+        <label class="installed-toggle">
+          <input id="productInstalled" type="checkbox">
+          <span class="fake-check"></span>
+          <span><strong>Fully Installed</strong><small>Show this product as fully installed on the public website.</small></span>
+        </label>
+
+        <div class="features-heading">
+          <div><label>Features</label><small>Add the bullet points customers should see.</small></div>
+          <button type="button" class="add-feature-button" id="addFeatureBtn">＋ Add Feature</button>
+        </div>
+        <div id="featuresList" class="features-list"></div>
+
+        <div class="form-actions">
+          <button type="button" class="cancel-button" id="cancelProductBtn">Cancel</button>
+          <button type="submit" class="admin-primary">Save Product</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>

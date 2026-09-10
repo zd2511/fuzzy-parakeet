@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#07110e">
+  <title>VTS Energy & Security</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="site-logo" href="#" aria-label="VTS Energy & Security home">
+        <img src="logo.png" alt="VTS Logo">
+      </a>
+
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a class="active" href="#">Home</a>
+        <a href="#solutions">About Us</a>
+        <a href="#solutions">Energy Solutions <span>⌄</span></a>
+        <a href="#solutions">Security Solutions <span>⌄</span></a>
+        <a href="#products">Products <span>⌄</span></a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a class="whatsapp-outline" href="https://wa.me/27330322153" target="_blank" rel="noopener">
+        <span class="wa-icon">◉</span> WhatsApp Us
+      </a>
+
+      <button class="mobile-menu" id="mobileMenu" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-backdrop">
+        <div class="hero-mountains"></div>
+        <div class="hero-house">
+          <div class="roof"></div>
+          <div class="house-glass"></div>
+          <div class="house-light"></div>
+        </div>
+        <div class="hero-camera">
+          <div class="camera-lens"></div>
+        </div>
+      </div>
+      <div class="hero-overlay"></div>
+
+      <div class="container hero-content">
+        <div class="hero-copy">
+          <p class="eyebrow">Integrated Energy &amp; Digital Security Solutions</p>
+          <h1>Power. Protection.<br><span>Peace of Mind.</span></h1>
+          <p class="hero-description">
+            VTS Energy &amp; Security provides reliable, affordable and professional
+            energy and security solutions for commercial, industrial and residential
+            clients across Southern Africa.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#products">Explore Our Products <b>→</b></a>
+            <a class="button button-glass" href="#contact">▣ &nbsp; Get a Quote</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="coverage-bar">
+      <div class="container coverage-inner">
+        <div class="coverage-intro">
+          <div class="coverage-map">⌁</div>
+          <div>
+            <strong>Our Coverage</strong>
+            <span>We operate across Southern Africa</span>
+          </div>
+        </div>
+        <div class="countries">
+          <span>South Africa</span><i></i><span>Zimbabwe</span><i></i><span>Zambia</span><i></i>
+          <span>Botswana</span><i></i><span>Namibia</span><i></i><span>Mozambique</span><i></i>
+          <span>Lesotho</span><i></i><span>Eswatini</span><i></i><span>Malawi</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="solutions-section" id="solutions">
+      <div class="container solutions-grid">
+        <div class="solutions-intro">
+          <p class="section-kicker">Our Solutions</p>
+          <h2>Energy &amp; Security<br>Under One Roof</h2>
+          <p class="section-copy">
+            From solar power and backup systems to CCTV, access control and
+            cybersecurity — we provide complete solutions to keep you powered,
+            protected and productive.
+          </p>
+          <a class="button green-button" href="#contact">View All Services <b>→</b></a>
+        </div>
+
+        <div class="solution-cards">
+          <article class="solution-card">
+            <div class="solution-visual solar-visual">
+              <div class="sun"></div>
+              <div class="solar-grid"></div>
+              <div class="solution-badge">⚡</div>
+            </div>
+            <div class="solution-body">
+              <h3>Energy Solutions</h3>
+              <ul>
+                <li>Solar power installation</li>
+                <li>Backup battery systems</li>
+                <li>UPS units</li>
+                <li>Inverter systems</li>
+                <li>Load shedding protection</li>
+                <li>Generator integration</li>
+                <li>Energy audits</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="solution-card">
+            <div class="solution-visual security-visual">
+              <div class="security-screen"></div>
+              <div class="security-camera one"></div>
+              <div class="security-camera two"></div>
+              <div class="solution-badge">✓</div>
+            </div>
+            <div class="solution-body">
+              <h3>Digital Security Solutions</h3>
+              <ul>
+                <li>Cybersecurity services</li>
+                <li>Network security</li>
+                <li>Data protection</li>
+                <li>CCTV surveillance</li>
+                <li>Access control systems</li>
+                <li>Biometric security</li>
+                <li>Alarm systems</li>
+                <li>Remote monitoring</li>
+                <li>Security audits</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="products-section" id="products">
+      <div class="container">
+        <div class="products-heading">
+          <div>
+            <p class="section-kicker">Featured Products</p>
+            <h2>Our Products</h2>
+          </div>
+          <div class="product-filters" id="productFilters"></div>
+        </div>
+        <div class="product-grid" id="productGrid"></div>
+      </div>
+    </section>
+
+    <section class="quote-strip">
+      <div class="quote-art"></div>
+      <div class="container quote-inner">
+        <div>
+          <p class="eyebrow">Ready to Get Started?</p>
+          <h2>Let’s Find the Right Solution for You</h2>
+          <p>Contact us today for a free consultation and personalised quote.</p>
+        </div>
+        <div class="quote-contact">
+          <a href="https://wa.me/27330322153" target="_blank" rel="noopener">◉ &nbsp; Chat on WhatsApp</a>
+          <span>☎ &nbsp; +27 33 032 2153</span>
+          <span>✉ &nbsp; sales@vtsenergysecurity.co.za</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="logo.png" alt="VTS Logo">
+      </div>
+
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <a href="#">Home</a>
+        <a href="#solutions">About Us</a>
+        <a href="#solutions">Energy Solutions</a>
+        <a href="#solutions">Security Solutions</a>
+        <a href="#products">Products</a>
+        <a href="#contact">Contact</a>
+        <a href="#" id="adminLink" class="secret-link">VTS</a>
+      </div>
+
+      <div class="footer-column">
+        <h4>Contact Us</h4>
+        <p>☎ &nbsp; +27 33 032 2153</p>
+        <p>▣ &nbsp; +27 62 269 2150</p>
+        <p>✉ &nbsp; sales@vtsenergysecurity.co.za</p>
+        <p>✉ &nbsp; info@vtsenergysecurity.co.za</p>
+        <p>⌖ &nbsp; 18 Stott Rd, Prestbury, Pietermaritzburg, 3201</p>
+      </div>
+
+      <div class="footer-column">
+        <h4>Follow Us</h4>
+        <div class="socials">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">◎</a>
+          <a href="#" aria-label="LinkedIn">in</a>
+        </div>
+        <p class="company-reg">(2023/259917/7)</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© 2025 VTS Energy &amp; Security. All rights reserved.</span>
+      <strong>ENERGY &nbsp;/&nbsp; SECURITY &nbsp;/&nbsp; SUSTAINABLE FUTURES</strong>
+    </div>
+  </footer>
+
+  <div class="modal hidden" id="passwordModal" role="dialog" aria-modal="true" aria-labelledby="adminModalTitle">
+    <div class="modal-card">
+      <button class="modal-close" id="closeModal" aria-label="Close">×</button>
+      <div class="modal-lock">⌘</div>
+      <h2 id="adminModalTitle">Admin Access</h2>
+      <p>Enter the administrator password to manage the product catalog.</p>
+      <label for="adminPassword">Password</label>
+      <input id="adminPassword" type="password" autocomplete="current-password" placeholder="Enter password">
+      <div class="login-error" id="loginError"></div>
+      <button class="button button-primary modal-submit" id="loginBtn">Continue →</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
